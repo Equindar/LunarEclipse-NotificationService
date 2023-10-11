@@ -1,0 +1,19 @@
+{
+  "name": "lunareclipse-notificationservice",
+  "version": "1.0.0",
+  "description": "Small module using node and socket.io to get notifications done",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "nodemon server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
+  }
+}
