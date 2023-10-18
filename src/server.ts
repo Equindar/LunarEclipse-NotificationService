@@ -1,7 +1,7 @@
 import { ClientToServerEvents, Config, InterServerEvents, ServerToClientEvents, SocketData } from './utils/interfaces';
 import { createServer } from "http";
 import { Server } from "socket.io";
-const cfg: Config = require('./config.json'); 
+import * as cfg from './cfg/config.json';
 
 const httpServer = createServer();
 const io = new Server<
@@ -25,5 +25,5 @@ io.on("connection", (socket) => {
 
 console.log(io.engine.clientsCount);
 httpServer.listen(cfg.port, () => {
-    console.log('Server running on "http://localhost" :port ' + cfg.port.toString())
+    console.log('Server running on "http://localhost:' + cfg.port.toString())
 });
